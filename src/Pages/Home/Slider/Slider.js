@@ -8,7 +8,7 @@ import img4 from '../../../image/banner/4.png'
 const Slider = () => {
     return (
         <div>
-            <div className="h-56 sm:h-96 xl:h-100 2xl:h-100 mt-4">
+            <div className="h-56 sm:h-96 xl:h-100 2xl:h-100 my-4">
                 <Carousel>
                     <img
                         src={img1}

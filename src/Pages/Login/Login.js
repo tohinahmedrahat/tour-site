@@ -2,8 +2,20 @@ import { Button, Label, TextInput } from 'flowbite-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import image from '../../image/login.png'
+import UseAuth from '../../Shared/UseAuth/UseAuth';
 
 const Login = () => {
+    const {singInWithGoogle} = UseAuth()
+    const loginWithGoogle = () => {
+        singInWithGoogle()
+        .then(result => {
+            const user = result.user;
+        })
+        .catch(error => {
+            const errorMessage = error.message;
+            console.log(errorMessage)
+        })
+    }
     return (
         <div >
             <div className='md:flex py-5'>
@@ -41,6 +53,7 @@ const Login = () => {
                             Login
                         </Button>
                     </form>
+                    <Button onClick={loginWithGoogle}>google</Button>
                     <p className='mt-5 text-lg text-amber-500 font-semibold'>Are You New <Link className='font-bold text-slate-800' to="/regester">Create Account</Link></p>
                 </div>
                 <div className='w-full'>

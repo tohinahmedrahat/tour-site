@@ -4,7 +4,7 @@ import React from 'react';
 const Service = () => {
     return (
         <div>
-            <h3 className='text-center text-lg font-semibold'>Tour Plans</h3>
+            <h3 className='text-center text-lg font-semibold my-4'>Tour Plans</h3>
             <div className='md:grid grid-cols-3 gap-4 md:mx-auto md:w-3/4'>
             <div className="max-w-sm">
                 <Card imgSrc="https://flowbite.com/docs/images/blog/image-1.jpg">
