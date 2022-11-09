@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const TourCard = ({ tour }) => {
-    const { name, details, img,id } = tour
+    const { name, details, img,_id } = tour
     return (
         <div>
             <div className="max-w-sm">
@@ -14,7 +14,7 @@ const TourCard = ({ tour }) => {
                     <p className="font-normal text-gray-700 dark:text-gray-400">
                         {details}
                     </p>
-                    <Link className='bg-green-400 text-white py-2 rounded' to={`/tour/${id}`}>See More</Link>
+                    <Link className='bg-green-400 text-white py-2 rounded' to={`/tour/${_id}`}>See More</Link>
                 </Card>
             </div>
         </div>
