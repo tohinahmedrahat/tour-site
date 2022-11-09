@@ -1,5 +1,6 @@
 import { Footer } from 'flowbite-react';
 import React from 'react';
+import logo from '../../image/logo.png';
 
 const FooterSection = () => {
     return (
@@ -10,7 +11,7 @@ const FooterSection = () => {
                         <div>
                             <Footer.Brand
                                 href="https://flowbite.com"
-                                src="https://flowbite.com/docs/images/logo.svg"
+                                src={logo}
                                 alt="Flowbite Logo"
                                 name="Dream Tour"
                             />
@@ -55,7 +56,7 @@ const FooterSection = () => {
                     <div className="w-full sm:flex sm:items-center sm:justify-between">
                         <Footer.Copyright
                             href="#"
-                            by="Flowbite™"
+                            by="tohinahmed"
                             year={2022}
                         />
                         <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">

@@ -1,9 +1,11 @@
-import { Navbar } from 'flowbite-react';
+import { Button, Navbar } from 'flowbite-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../image/logo.png"
+import UseAuth from '../UseAuth/UseAuth';
 
 const Header = () => {
+    const {user,logOut} = UseAuth()
     return (
         <Navbar className='bg-slate-600'
             fluid={true}
@@ -21,8 +23,11 @@ const Header = () => {
             <Navbar.Toggle />
             <Navbar.Collapse>
                 <Link className='text-white' to="/">Home</Link>
-                <Link className='text-white' to="/login">Login</Link>
-                <Link className='text-white' to="/regester">Regester</Link>
+                <Link className='text-white' to="/tour">Tour</Link>
+                {
+                    user?.email?<Button outline onClick={logOut}>Log Out</Button>: <div><Link className='text-white mr-2' to="/login">Login</Link>
+                    <Link className='text-white' to="/regester">Regester</Link></div>
+                }
             </Navbar.Collapse>
         </Navbar>
     );

@@ -1,9 +1,9 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDOdxGHh_nPBH67mR7dEoO6HyITFU29Hs8",
-    authDomain: "dream-tour-2b13c.firebaseapp.com",
-    projectId: "dream-tour-2b13c",
-    storageBucket: "dream-tour-2b13c.appspot.com",
-    messagingSenderId: "349727771955",
-    appId: "1:349727771955:web:cca139278cbc1e031dc246"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
   };
   export default firebaseConfig;
