@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF,faGithub,faLinkedin,faTwitterSquare } from '@fortawesome/free-brands-svg-icons' 
+
 import { Footer } from 'flowbite-react';
 import React from 'react';
 import logo from '../../image/logo.png';
@@ -60,7 +63,11 @@ const FooterSection = () => {
                             year={2022}
                         />
                         <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-
+                        <a href="https://www.facebook.com/Bleaklife"><FontAwesomeIcon icon={faFacebookF} size="lg" color='white'></FontAwesomeIcon></a>
+                        <a href="https://github.com/tohinahmedrahat"><FontAwesomeIcon icon={faGithub} size="lg" color='white'></FontAwesomeIcon></a>
+                        <a href="https://www.linkedin.com/in/tohim-ahmed-04a9b7227/"><FontAwesomeIcon icon={faLinkedin} size="lg" color='white'></FontAwesomeIcon></a>
+                        <a href="https://twitter.com/tohinahmed15"><FontAwesomeIcon icon={faTwitterSquare} size="lg" color='white'></FontAwesomeIcon></a>
+                        
                         </div>
                     </div>
                 </div>
