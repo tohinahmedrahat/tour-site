@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const UserReviewCard = ({review}) => {
     const { img, userEmail, userName, userReview,_id } = review
+    // add delet review function
     const deletReview = id => {
         const agreed = window.confirm("are you want to delet")
         if(agreed){
