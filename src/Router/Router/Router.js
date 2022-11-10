@@ -39,12 +39,12 @@ const Router = createBrowserRouter([
             },
             {
                 path:"/review",
-                element:<UserReview></UserReview>
+                element:<PrivateRoute><UserReview></UserReview></PrivateRoute>
             },
             {
                 path:"/update/:id",
                 loader:({params}) => fetch(`https://tour-server.vercel.app/review/${params.id}`),
-                element:<UpdateReview></UpdateReview>
+                element:<PrivateRoute><UpdateReview></UpdateReview></PrivateRoute>
             },
             {
                 path:"/blog",
