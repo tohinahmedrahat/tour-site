@@ -24,7 +24,7 @@ const AddReview = ({ tour }) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(Review)
         };
-        fetch("http://localhost:5000/review",requestOptions)
+        fetch("https://tour-server.vercel.app/review",requestOptions)
         .then(res => res.json())
         .then(data => {
             console.log(data.acknowledged)

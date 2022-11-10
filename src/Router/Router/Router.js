@@ -29,12 +29,12 @@ const Router = createBrowserRouter([
             },
             {
                 path:"/tour",
-                loader:()=> fetch("http://localhost:5000/tour"),
+                loader:()=> fetch("https://tour-server.vercel.app/tour"),
                 element:<Tour></Tour>
             },
             {
                 path:"/tour/:id",
-                loader:({params}) => fetch(`http://localhost:5000/tour/${params.id}`),
+                loader:({params}) => fetch(`https://tour-server.vercel.app/tour/${params.id}`),
                 element:<PrivateRoute><SingleTour></SingleTour></PrivateRoute>
             },
             {
@@ -43,7 +43,7 @@ const Router = createBrowserRouter([
             },
             {
                 path:"/update/:id",
-                loader:({params}) => fetch(`http://localhost:5000/review/${params.id}`),
+                loader:({params}) => fetch(`https://tour-server.vercel.app/review/${params.id}`),
                 element:<UpdateReview></UpdateReview>
             },
             {

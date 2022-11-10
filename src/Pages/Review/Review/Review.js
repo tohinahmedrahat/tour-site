@@ -6,7 +6,7 @@ const Review = ({ tour }) => {
     const { name } = tour
     const [reviews, setReview] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/review?name=${name}`)
+        fetch(`https://tour-server.vercel.app/review?name=${name}`)
             .then(res => res.json())
             .then(data => setReview(data))
     }, [name])

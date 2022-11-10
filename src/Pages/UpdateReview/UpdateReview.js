@@ -10,7 +10,7 @@ const UpdateReview = () => {
         e.preventDefault();
         const name = e.target.name.value;
         const review = e.target.review.value;
-        fetch(`http://localhost:5000/reviewUpdate/${data._id}`, {
+        fetch(`https://tour-server.vercel.app/reviewUpdate/${data._id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

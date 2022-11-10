@@ -9,7 +9,7 @@ const UserReviewCard = ({review}) => {
     const deletReview = id => {
         const agreed = window.confirm("are you want to delet")
         if(agreed){
-            fetch(`http://localhost:5000/review/${id}`,{
+            fetch(`https://tour-server.vercel.app/review/${id}`,{
                 method:"DELETE"
             })
             .then(res => res.json())
