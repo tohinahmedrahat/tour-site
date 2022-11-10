@@ -1,12 +1,14 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import AddReview from '../Review/AddReview/AddReview';
+import Review from '../Review/Review/Review';
 
 const SingleTour = () => {
     const tour = useLoaderData()
     const {details,img,rating,price,name}=tour
     return (
-        <div>
-            <div className='grid md:grid-cols-2 gap-4 md:px-10 py-4 bg-cyan-400'>
+        <div className='bg-slate-300 grid md:grid-cols-2'>
+            <div className=' md:px-10 py-4 bg-cyan-400'>
                 <div>
                     <img src={img} alt="tour name" />
                 </div>
@@ -16,6 +18,10 @@ const SingleTour = () => {
                     <h4 className='text-xl font-bold text-neutral-700'>Price: {price}</h4>
                     <h6 className='text-lg font-bold text-neutral-700'>Rating: {rating}</h6>
                 </div>
+            </div>
+            <div>
+            <Review tour={tour}></Review>
+            <AddReview tour={tour}></AddReview>
             </div>
         </div>
     );
