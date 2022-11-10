@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Main from "../../Pages/Main/Main";
@@ -44,8 +45,17 @@ const Router = createBrowserRouter([
                 path:"/update/:id",
                 loader:({params}) => fetch(`http://localhost:5000/review/${params.id}`),
                 element:<UpdateReview></UpdateReview>
+            },
+            {
+                path:"/blog",
+                element:<Blog></Blog>
             }
-        ]
+        ],
+       
+    },
+    {
+        path:"*",
+        element:<h1 className="text-xl text-red-700 font-bold my-4">sorry your page not found</h1>
     }
 ])
 export default Router;
