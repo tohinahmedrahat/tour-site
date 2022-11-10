@@ -32,7 +32,8 @@ const UpdateReview = () => {
     }
     return (
         <div>
-            <form onSubmit={handleEdit} className="flex flex-col gap-4">
+            <h1 className='text-xl my-4 capitalize font-semibold text-center'>update your review</h1>
+            <form onSubmit={handleEdit} className="flex flex-col gap-4 my-4 text-left md:mx-8">
                 <div>
                     <div className="mb-2 block">
                         <Label
@@ -52,7 +53,7 @@ const UpdateReview = () => {
                     <div className="mb-2 block">
                         <Label
                             htmlFor="comment"
-                            value="Your message"
+                            value="Your review"
                         />
                     </div>
                     <Textarea
