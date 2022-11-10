@@ -24,6 +24,7 @@ const Header = () => {
             <Navbar.Collapse>
                 <Link className='text-white' to="/">Home</Link>
                 <Link className='text-white' to="/tour">Tour</Link>
+                <Link className='text-white' to="/review">My Review</Link>
                 {
                     user?.email?<Button outline onClick={logOut}>Log Out</Button>: <div><Link className='text-white mr-2' to="/login">Login</Link>
                     <Link className='text-white' to="/regester">Regester</Link></div>

@@ -5,6 +5,7 @@ import Main from "../../Pages/Main/Main";
 import Regester from "../../Pages/Regester/Regester";
 import SingleTour from "../../Pages/SingleTour/SingleTour";
 import Tour from "../../Pages/Tour/Tour";
+import UserReview from "../../Pages/UserReview/UserReview";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const Router = createBrowserRouter([
@@ -33,6 +34,10 @@ const Router = createBrowserRouter([
                 path:"/tour/:id",
                 loader:({params}) => fetch(`http://localhost:5000/tour/${params.id}`),
                 element:<PrivateRoute><SingleTour></SingleTour></PrivateRoute>
+            },
+            {
+                path:"/review",
+                element:<UserReview></UserReview>
             }
         ]
     }

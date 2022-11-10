@@ -24,7 +24,7 @@ const Review = ({ tour }) => {
                     <div className="flow-root">
                         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
                             {
-                                reviews.map(review => <ReviewCard review={review}></ReviewCard>)
+                                reviews.map(review => <ReviewCard key={review._id} review={review}></ReviewCard>)
                             }
                         </ul>
                     </div>
