@@ -13,7 +13,7 @@ const ReviewCard = ({ review }) => {
                             alt="user img"
                         />
                     </div>
-                    <div className="min-w-0 flex-1">
+                    <div className="min-w-0">
                         <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
                             {userName}
                         </p>
