@@ -1,9 +1,25 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDele } from '@fortawesome/free-brands-svg-icons' 
+import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const UserReviewCard = ({review}) => {
-    const { img, userEmail, userName, userReview } = review
+    const { img, userEmail, userName, userReview,_id } = review
+    const deletReview = id => {
+        const agreed = window.confirm("are you want to delet")
+        if(agreed){
+            fetch(`http://localhost:5000/review/${id}`,{
+                method:"DELETE"
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.deletedCount > 0){
+                    toast("your item delet succssfully")
+                }
+                console.log(data)
+            })
+        }
+    }
     return (
         <div>
             <li className="py-3">
@@ -23,12 +39,16 @@ const UserReviewCard = ({review}) => {
                             {userEmail}
                         </p>
                     </div>
-                    <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                    <div className="md:flex-1 items-center text-base font-semibold text-gray-900 dark:text-white">
                         {userReview}
                     </div>
                     <div>
-                        <button></button>
+                        <Link to={`/update/${_id}`}>Update</Link>
                     </div>
+                    <div>
+                        <button onClick={()=> deletReview(_id)}>delete</button>
+                    </div>
+                    <ToastContainer></ToastContainer>
                 </div>
             </li>
         </div>

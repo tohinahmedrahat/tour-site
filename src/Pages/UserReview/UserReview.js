@@ -5,12 +5,13 @@ import UserReviewCard from './UserReviewCard';
 
 const UserReview = () => {
     const {user} = UseAuth()
-    const [reviews,setReview] = useState([])
+    const [review,setReview] = useState([])
     useEffect(()=>{
         fetch(`http://localhost:5000/reviews?email=${user.email}`)
         .then(res => res.json())
         .then(data => setReview(data))
     },[user.email])
+
     return (
         <div>
             <h1 className='text-xl my-3 font-bold capitalize'>{user.displayName}</h1>
@@ -19,7 +20,7 @@ const UserReview = () => {
                     <div className="flow-root">
                         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
                             {
-                                reviews.map(review =><UserReviewCard key={review._id} review={review}></UserReviewCard>)
+                                review.map(review =><UserReviewCard key={review._id} review={review}></UserReviewCard>)
                             }
                         </ul>
                     </div>

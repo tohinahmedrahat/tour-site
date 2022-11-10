@@ -5,6 +5,7 @@ import Main from "../../Pages/Main/Main";
 import Regester from "../../Pages/Regester/Regester";
 import SingleTour from "../../Pages/SingleTour/SingleTour";
 import Tour from "../../Pages/Tour/Tour";
+import UpdateReview from "../../Pages/UpdateReview/UpdateReview";
 import UserReview from "../../Pages/UserReview/UserReview";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
@@ -38,6 +39,11 @@ const Router = createBrowserRouter([
             {
                 path:"/review",
                 element:<UserReview></UserReview>
+            },
+            {
+                path:"/update/:id",
+                loader:({params}) => fetch(``),
+                element:<UpdateReview></UpdateReview>
             }
         ]
     }
